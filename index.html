@@ -542,7 +542,7 @@
       const grid = document.getElementById('dynamicTools');
 
       try {
-        const res = await fetch(`https://api.github.com/orgs/${GITHUB_ORG}/repos?per_page=100&sort=created&direction=desc`);
+        const res = await fetch(`https://api.github.com/users/${GITHUB_ORG}/repos?per_page=100&sort=created&direction=desc`);
         const repos = await res.json();
 
         if (!Array.isArray(repos)) throw new Error('API error');
